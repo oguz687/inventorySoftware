@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="model.MainModelTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-01-01T21:45:23" hostname="DESKTOP-NEE8PHK" time="1.563">
+  <properties/>
+  <testcase name="incrementProduct()" classname="model.MainModelTest" time="0.011"/>
+  <testcase name="counterProduct()" classname="model.MainModelTest" time="0.0"/>
+  <testcase name="decrementProduct()" classname="model.MainModelTest" time="0.0"/>
+  <testcase name="addProduct()" classname="model.MainModelTest" time="0.0"/>
+  <testcase name="databaseControl()" classname="model.MainModelTest" time="1.548"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Oca 02, 2020 12:45:25 ÖÖ com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Oca 02, 2020 12:45:25 ÖÖ com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:1498}] to localhost:27017
+Oca 02, 2020 12:45:25 ÖÖ com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 2]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2739200}
+Oca 02, 2020 12:45:25 ÖÖ com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+Oca 02, 2020 12:45:25 ÖÖ com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:1499}] to 127.0.0.1:27017
+Oca 02, 2020 12:45:25 ÖÖ com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 2, 2]}, minWireVersion=0, maxWireVersion=8, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=576100}
+Oca 02, 2020 12:45:25 ÖÖ com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:3, serverValue:1500}] to 127.0.0.1:27017
+]]></system-err>
+</testsuite>
