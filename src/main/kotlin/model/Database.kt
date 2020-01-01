@@ -7,16 +7,17 @@ import org.bson.Document
 import org.koin.core.inject
 import java.util.*
 
-class Database() {
+object Database {
 
 
-//    val client = MongoClient(MongoClientURI("mongodb://localhost:27017"))
+    //    val client = MongoClient(MongoClientURI("mongodb://localhost:27017"))
 //    val database = client.getDatabase("stok")
 //    val collection = database.getCollection("ürünler")
-    val conn=ConnectionString("mongodb://localhost:27017")
-    val sett=MongoClientSettings.builder().applyConnectionString(conn).retryWrites(true).build()
-    val client= MongoClients.create(sett)
-    val db=MongoClient().getDatabase("stok")
+    val conn = ConnectionString("mongodb://localhost:27017")
+    val sett = MongoClientSettings.builder().applyConnectionString(conn).retryWrites(true).build()
+    val client = MongoClients.create(sett)
+    val db = MongoClient().getDatabase("stok")
+
     init {
 
         try {
@@ -32,14 +33,12 @@ class Database() {
         }
 
     }
-    companion object Factory{
-        fun create():Database=Database()
-}
+
 
 }
 fun main(){
-    val fsd=Database()
-    val doc=Document().append("product","rgergsdfsdf")
+    val fsd=Database
+    val doc=Document().append("product","453fsdf")
 //    Database.create().collection.insertOne(doc)
     fsd.db.getCollection("ürünler").insertOne(doc)
 //    fsd.collection.insertOne(doc)

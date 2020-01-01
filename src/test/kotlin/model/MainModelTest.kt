@@ -22,21 +22,18 @@ internal class MainModelTest {
         val modelclass= mockk<MainModel>()
         return modelclass
         }
-    fun getProductClass():Product{
-        val productclass= mockk<Product>(relaxed = true){
+
+    @Test
+    fun databaseControl(){
+        val productclass= mockk<Product>(){
             every { name } returns "pantolom"
             every { id } returns 1213
             every { count } returns 12
             every { owner } returns "oğuz"
         }
-        return productclass
-    }
-    @Test
-    fun databaseControl(){
-        val db=Database()
-        Timer("SettingUp", true).schedule(100) {
-            db.db.getCollection("ürünler").insertOne(Document("product",getProductClass()))
-        }
+        val db=Database
+        val doc=Document().append("product", mapOf("count " to productclass.count,"owner" to productclass.owner,"id" to productclass.id,"name" to productclass.name))
+        db.db.getCollection("ürünler1").insertOne(doc)
         db.client.close()
     }
     @Test

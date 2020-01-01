@@ -9,7 +9,7 @@ import org.koin.dsl.module
 
 class Dependency{
     val modules= module {
-        single {Database()}
+        single {Database}
         factory { MainModel() }
         factory { Product(get(),get(),get(),get()) }
     }
