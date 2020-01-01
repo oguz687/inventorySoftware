@@ -12,17 +12,17 @@ class MainModel :IModel,KoinComponent {
     private val database:Database by inject<Database>()
 
     override fun addProduct(product: IProduct) {
-        database.collection.insertOne(Document("ürün",product))
+//        database.collection.insertOne(Document("ürün",product))
 
     }
 
     override fun removeProduct(product: IProduct) {
-        database.collection.deleteOne(Document("ürün",product))
+//        database.collection.deleteOne(Document("ürün",product))
     }
 
     override fun incrementProduct(product: IProduct, piece: Int) {
-        val getProduct=database.collection.find(Document("ürün",product))
-        getProduct.filter(Document("count",null))
+//        val getProduct=database.collection.find(Document("ürün",product))
+//        getProduct.filter(Document("count",null))
     }
 
     override fun decrementProduct(product: IProduct, piece: Int) {
